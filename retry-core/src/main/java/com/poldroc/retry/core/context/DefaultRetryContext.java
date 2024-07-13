@@ -125,6 +125,11 @@ public class DefaultRetryContext<R> implements RetryContext<R> {
         return callable;
     }
 
+    public DefaultRetryContext<R> callable(Callable<R> callable) {
+        this.callable = callable;
+        return this;
+    }
+
     public DefaultRetryContext<R> retry(Callable<R> callable) {
         this.callable = callable;
         return this;
