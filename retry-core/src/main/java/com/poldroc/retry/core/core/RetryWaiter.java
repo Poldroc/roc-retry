@@ -1,8 +1,10 @@
 package com.poldroc.retry.core.core;
 
+import com.poldroc.retry.api.context.RetryWaitContext;
 import com.poldroc.retry.api.support.wait.RetryWait;
 import com.poldroc.retry.common.annotation.NotThreadSafe;
 import com.poldroc.retry.core.constant.RetryWaitConst;
+import com.poldroc.retry.core.context.DefaultRetryWaitContext;
 import com.poldroc.retry.core.support.wait.ExponentialRetryWait;
 import com.poldroc.retry.core.support.wait.IncreaseRetryWait;
 import com.poldroc.retry.core.support.wait.NoRetryWait;
@@ -54,7 +56,7 @@ public class RetryWaiter<R> {
 
     /**
      * 设置重试等待的对象类型
-     *
+     * 并且设置默认的因子
      * @param retryWait 重试等待类
      * @param <R>       泛型
      * @return 重试等待类
@@ -111,4 +113,15 @@ public class RetryWaiter<R> {
         return this;
     }
 
+    /**
+     * 构建重试等待时间上下文
+     */
+    public RetryWaitContext<R> context() {
+        return new DefaultRetryWaitContext<R>()
+                .value(value)
+                .min(min)
+                .max(max)
+                .factor(factor)
+                .retryWait(retryWait);
+    }
 }
