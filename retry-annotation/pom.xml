@@ -17,4 +17,23 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
 
+    <dependencies>
+        <dependency>
+            <groupId>cglib</groupId>
+            <artifactId>cglib</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.poldroc</groupId>
+            <artifactId>retry-api</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.poldroc</groupId>
+            <artifactId>retry-common</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.poldroc</groupId>
+            <artifactId>retry-core</artifactId>
+        </dependency>
+    </dependencies>
+
 </project>
