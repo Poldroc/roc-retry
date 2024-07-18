@@ -3,6 +3,8 @@ package com.poldroc.retry.api.support.wait;
 import com.poldroc.retry.api.context.RetryWaitContext;
 import com.poldroc.retry.api.model.WaitTime;
 
+import java.lang.annotation.Annotation;
+
 /**
  * 重试等待策略
  * 1. 所有的实现必须要有无参构造器，因为会基于反射处理类信息。
@@ -11,7 +13,7 @@ import com.poldroc.retry.api.model.WaitTime;
  * @date 2024/7/11
  */
 
-public interface RetryWait {
+public interface RetryWait{
 
     /**
      * 等待时间

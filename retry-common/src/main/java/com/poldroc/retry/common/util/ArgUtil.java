@@ -1,5 +1,8 @@
 package com.poldroc.retry.common.util;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  * 参数工具类
  *
@@ -47,9 +50,23 @@ public final class ArgUtil {
                 Object object = var2[var4];
                 notNull(object, name + " element ");
             }
-
         }
     }
+
+    public static void notEmpty(List list, String name) {
+        if (list == null || list.isEmpty()) {
+            throw new IllegalArgumentException(name + " excepted is not empty!");
+        } else {
+            Object[] var2 = list.toArray();
+            int var3 = var2.length;
+
+            for (int var4 = 0; var4 < var3; ++var4) {
+                Object object = var2[var4];
+                notNull(object, name + " element ");
+            }
+        }
+    }
+
 
     public static void positive(int number, String paramName) {
         if (number <= 0) {

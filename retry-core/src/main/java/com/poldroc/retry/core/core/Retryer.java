@@ -143,6 +143,12 @@ public class Retryer<R> implements Retry<R> {
         return this;
     }
 
+    public Retryer<R> retryWaitContext(List<RetryWaitContext<R>> retryWaitContexts) {
+        ArgUtil.notEmpty(retryWaitContexts, "retryWaitContexts");
+        this.waitContexts = retryWaitContexts;
+        return this;
+    }
+
     /**
      * 最大尝试次数
      *
