@@ -3,7 +3,7 @@ package com.poldroc.retry.core.support.recover;
 import com.poldroc.retry.api.model.RetryAttempt;
 import com.poldroc.retry.api.support.recover.Recover;
 import com.poldroc.retry.common.annotation.ThreadSafe;
-import com.poldroc.retry.common.support.impl.InstanceFactory;
+import com.poldroc.retry.common.support.instance.impl.InstanceFactory;
 
 /**
  * 不指定任何动作

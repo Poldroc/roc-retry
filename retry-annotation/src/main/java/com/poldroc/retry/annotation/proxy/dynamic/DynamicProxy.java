@@ -3,7 +3,7 @@ package com.poldroc.retry.annotation.proxy.dynamic;
 import com.poldroc.retry.annotation.handler.method.RetryMethodHandler;
 import com.poldroc.retry.annotation.proxy.IProxy;
 import com.poldroc.retry.common.annotation.ThreadSafe;
-import com.poldroc.retry.common.support.impl.InstanceFactory;
+import com.poldroc.retry.common.support.instance.impl.InstanceFactory;
 
 import java.lang.reflect.InvocationHandler;
 import java.lang.reflect.InvocationTargetException;

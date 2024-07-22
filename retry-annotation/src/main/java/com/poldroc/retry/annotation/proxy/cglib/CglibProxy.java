@@ -3,7 +3,7 @@ package com.poldroc.retry.annotation.proxy.cglib;
 import com.poldroc.retry.annotation.handler.method.RetryMethodHandler;
 import com.poldroc.retry.annotation.proxy.IProxy;
 import com.poldroc.retry.common.annotation.ThreadSafe;
-import com.poldroc.retry.common.support.impl.InstanceFactory;
+import com.poldroc.retry.common.support.instance.impl.InstanceFactory;
 import net.sf.cglib.proxy.Enhancer;
 import net.sf.cglib.proxy.MethodInterceptor;
 import net.sf.cglib.proxy.MethodProxy;

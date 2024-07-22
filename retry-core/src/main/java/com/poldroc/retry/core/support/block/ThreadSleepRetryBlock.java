@@ -4,7 +4,7 @@ import com.poldroc.retry.api.exception.RetryException;
 import com.poldroc.retry.api.model.WaitTime;
 import com.poldroc.retry.api.support.block.RetryBlock;
 import com.poldroc.retry.common.annotation.ThreadSafe;
-import com.poldroc.retry.common.support.impl.InstanceFactory;
+import com.poldroc.retry.common.support.instance.impl.InstanceFactory;
 
 /**
  * 线程睡眠的阻塞方法

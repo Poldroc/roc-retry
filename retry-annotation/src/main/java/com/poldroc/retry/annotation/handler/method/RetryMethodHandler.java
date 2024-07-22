@@ -6,7 +6,7 @@ import com.poldroc.retry.annotation.model.RetryAbleBean;
 import com.poldroc.retry.annotation.proxy.IMethodHandler;
 import com.poldroc.retry.api.context.RetryContext;
 import com.poldroc.retry.common.annotation.ThreadSafe;
-import com.poldroc.retry.common.support.impl.InstanceFactory;
+import com.poldroc.retry.common.support.instance.impl.InstanceFactory;
 import com.poldroc.retry.core.core.Retryer;
 
 import java.lang.annotation.Annotation;
@@ -42,6 +42,19 @@ public class RetryMethodHandler implements IMethodHandler {
 
 
     /**
+     * 重试调用
+     * @param retryAbleBean 重试调用对象
+     * @param callable 待重试方法
+     * @return 执行结果
+     */
+    public Object retryCall(RetryAbleBean retryAbleBean,Callable callable) {
+        RetryAbleHandler retryAbleHandler = InstanceFactory.getInstance().threadSafe(retryAbleBean.retryAble().value());
+        RetryContext retryContext = retryAbleHandler.build(retryAbleBean.annotation(), callable);
+        retryContext.params(retryAbleBean.args());
+        return Retryer.newInstance().retryCall(retryContext);
+    }
+
+    /**
      * 查找重试注解
      *
      * @param method 方法
@@ -55,12 +68,13 @@ public class RetryMethodHandler implements IMethodHandler {
             return Optional.empty();
         }
         for (Annotation annotation : annotations) {
-            if (annotation instanceof RetryAble) {
-                RetryAbleBean retryAbleBean = new RetryAbleBean();
-                retryAbleBean.retryAble((RetryAble) annotation)
+            RetryAble retryAble = annotation.annotationType().getAnnotation(RetryAble.class);
+            if (retryAble != null) {
+                RetryAbleBean bean = new RetryAbleBean();
+                bean.retryAble(retryAble)
                         .annotation(annotation)
                         .args(args);
-                return Optional.of(retryAbleBean);
+                return Optional.of(bean);
             }
         }
         return Optional.empty();

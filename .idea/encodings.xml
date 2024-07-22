@@ -9,6 +9,12 @@
     <file url="file://$PROJECT_DIR$/retry-common/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/retry-core/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/retry-core/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/retry-spring/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/retry-spring/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/retry-springboot-starter/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/retry-springboot-starter/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/retry-test/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/retry-test/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/main/resources" charset="UTF-8" />
   </component>

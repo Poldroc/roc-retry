@@ -13,6 +13,9 @@
         <module>retry-api</module>
         <module>retry-core</module>
         <module>retry-common</module>
+        <module>retry-test</module>
+        <module>retry-spring</module>
+        <module>retry-springboot-starter</module>
     </modules>
 
     <properties>
@@ -22,12 +25,14 @@
 
         <junit.version>4.13.1</junit.version>
         <cglib.version>3.1</cglib.version>
+        <spring.version>5.3.20</spring.version>
+        <aspectj.version>1.9.19</aspectj.version>
+        <spring-boot.version>2.7.5</spring-boot.version>
 
     </properties>
 
     <dependencyManagement>
         <dependencies>
-            <!--============================== SELF ==============================-->
             <dependency>
                 <groupId>${project.groupId}</groupId>
                 <artifactId>retry-api</artifactId>
@@ -48,6 +53,11 @@
                 <artifactId>retry-common</artifactId>
                 <version>${project.version}</version>
             </dependency>
+            <dependency>
+                <groupId>${project.groupId}</groupId>
+                <artifactId>retry-spring</artifactId>
+                <version>${project.version}</version>
+            </dependency>
 
 
             <dependency>
@@ -61,6 +71,40 @@
                 <groupId>cglib</groupId>
                 <artifactId>cglib</artifactId>
                 <version>${cglib.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.springframework</groupId>
+                <artifactId>spring-aop</artifactId>
+                <version>${spring.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework</groupId>
+                <artifactId>spring-context</artifactId>
+                <version>${spring.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework</groupId>
+                <artifactId>spring-test</artifactId>
+                <version>${spring.version}</version>
+                <scope>test</scope>
+            </dependency>
+
+            <dependency>
+                <groupId>org.aspectj</groupId>
+                <artifactId>aspectjweaver</artifactId>
+                <version>${aspectj.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.aspectj</groupId>
+                <artifactId>aspectjrt</artifactId>
+                <version>${aspectj.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-starter</artifactId>
+                <version>${spring-boot.version}</version>
             </dependency>
 
         </dependencies>

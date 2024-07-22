@@ -4,7 +4,7 @@ import com.poldroc.retry.api.context.RetryWaitContext;
 import com.poldroc.retry.api.model.WaitTime;
 import com.poldroc.retry.api.support.wait.RetryWait;
 import com.poldroc.retry.common.annotation.ThreadSafe;
-import com.poldroc.retry.common.support.impl.InstanceFactory;
+import com.poldroc.retry.common.support.instance.impl.InstanceFactory;
 
 /**
  * 无时间等待

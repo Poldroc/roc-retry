@@ -2,7 +2,7 @@ package com.poldroc.retry.core.support.condition;
 
 import com.poldroc.retry.api.model.RetryAttempt;
 import com.poldroc.retry.api.support.condition.RetryCondition;
-import com.poldroc.retry.common.support.impl.InstanceFactory;
+import com.poldroc.retry.common.support.instance.impl.InstanceFactory;
 
 import java.util.LinkedList;
 

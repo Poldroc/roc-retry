@@ -13,7 +13,7 @@ import com.poldroc.retry.api.support.recover.Recover;
 import com.poldroc.retry.api.support.stop.RetryStop;
 import com.poldroc.retry.api.support.wait.RetryWait;
 import com.poldroc.retry.common.annotation.ThreadSafe;
-import com.poldroc.retry.common.support.impl.InstanceFactory;
+import com.poldroc.retry.common.support.instance.impl.InstanceFactory;
 import com.poldroc.retry.core.context.DefaultRetryWaitContext;
 import com.poldroc.retry.core.model.DefaultAttemptTime;
 import com.poldroc.retry.core.model.DefaultRetryAttempt;

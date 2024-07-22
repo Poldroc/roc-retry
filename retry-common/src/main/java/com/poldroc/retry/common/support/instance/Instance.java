@@ -1,4 +1,4 @@
-package com.poldroc.retry.common.support;
+package com.poldroc.retry.common.support.instance;
 
 /**
  * 实例化对象的接口

@@ -1,7 +1,7 @@
-package com.poldroc.retry.common.support.impl;
+package com.poldroc.retry.common.support.instance.impl;
 
 import com.poldroc.retry.common.annotation.ThreadSafe;
-import com.poldroc.retry.common.support.Instance;
+import com.poldroc.retry.common.support.instance.Instance;
 import com.poldroc.retry.common.util.ArgUtil;
 
 import java.util.Map;
