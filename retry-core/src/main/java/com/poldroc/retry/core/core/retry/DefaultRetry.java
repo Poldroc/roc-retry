@@ -128,7 +128,7 @@ public class DefaultRetry<R> implements Retry<R> {
                                     final List<RetryAttempt<R>> history,
                                     final RetryContext<R> context) {
 
-        final Date startTime = new Date();
+        Date startTime = new Date();
         Throwable throwable = null;
         R result = null;
         try {
@@ -136,7 +136,7 @@ public class DefaultRetry<R> implements Retry<R> {
         } catch (Exception e) {
             throwable = getActualThrowable(e);
         }
-        final Date endTime = new Date();
+        Date endTime = new Date();
         DefaultAttemptTime attemptTime = new DefaultAttemptTime()
                 .startTime(startTime)
                 .endTime(endTime)

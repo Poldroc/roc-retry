@@ -19,6 +19,7 @@ public class RetryAbleBean {
 
     /**
      * 原始注解信息
+     * @see com.poldroc.retry.annotation.annotation.Retry
      */
     private Annotation annotation;
 

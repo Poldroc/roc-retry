@@ -56,4 +56,13 @@ public class DefaultAttemptTime implements AttemptTime {
         this.costTimeInMills = costTimeInMills;
         return this;
     }
+
+    @Override
+    public String toString() {
+        return "DefaultAttemptTime{" +
+                "startTime=" + startTime +
+                ", endTime=" + endTime +
+                ", costTimeInMills=" + costTimeInMills +
+                '}';
+    }
 }

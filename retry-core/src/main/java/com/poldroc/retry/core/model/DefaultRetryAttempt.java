@@ -4,9 +4,12 @@ import com.poldroc.retry.api.model.AttemptTime;
 import com.poldroc.retry.api.model.RetryAttempt;
 import com.poldroc.retry.common.annotation.NotThreadSafe;
 
+import java.util.Arrays;
 import java.util.List;
+
 /**
  * 默认重试信息
+ *
  * @author Poldroc
  * @date 2024/7/11
  */
@@ -41,6 +44,7 @@ public class DefaultRetryAttempt<R> implements RetryAttempt<R> {
 
     /**
      * 请求参数
+     *
      * @since 0.1.0
      */
     private Object[] params;
@@ -104,4 +108,16 @@ public class DefaultRetryAttempt<R> implements RetryAttempt<R> {
         this.params = params;
         return this;
     }
+
+    @Override
+    public String toString() {
+        return "DefaultRetryAttempt{" +
+                "result=" + result +
+                ", attempt=" + attempt +
+                ", cause=" + cause +
+                ", time=" + time +
+                ", params=" + Arrays.toString(params) +
+                '}';
+    }
+
 }

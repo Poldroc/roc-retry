@@ -45,15 +45,14 @@ public class DefaultRetryAbleHandler<R> implements RetryAbleHandler<Retry, R> {
      * @return 上下文列表
      */
     private List<RetryWaitContext<R>> buildRetryWaitContext(Retry retry) {
-        List<RetryWaitContext<R>> retryWaitContexts = Collections.singletonList(RetryWaiter.<R>retryWait(NoRetryWait.class).context());
         if (retry == null) {
-            return retryWaitContexts;
+            return Collections.singletonList(RetryWaiter.<R>retryWait(NoRetryWait.class).context());
         }
         RetryWait[] waits = retry.waits();
         if (waits == null || waits.length == 0) {
-            return retryWaitContexts;
+            return Collections.singletonList(RetryWaiter.<R>retryWait(NoRetryWait.class).context());
         }
-        retryWaitContexts = new ArrayList<>();
+        List<RetryWaitContext<R>>  retryWaitContexts = new ArrayList<>();
         DefaultRetryWaitAbleHandler defaultRetryWaitAbleHandler = InstanceFactory.getInstance().threadSafe(DefaultRetryWaitAbleHandler.class);
         for (RetryWait wait : waits) {
             retryWaitContexts.add(defaultRetryWaitAbleHandler.build(wait));

@@ -11,6 +11,7 @@ import com.poldroc.retry.core.core.Retryer;
 
 import java.lang.annotation.Annotation;
 import java.lang.reflect.Method;
+import java.util.Arrays;
 import java.util.Optional;
 import java.util.concurrent.Callable;
 
@@ -48,6 +49,7 @@ public class RetryMethodHandler implements IMethodHandler {
      * @return 执行结果
      */
     public Object retryCall(RetryAbleBean retryAbleBean,Callable callable) {
+        // 获得注解处理器
         RetryAbleHandler retryAbleHandler = InstanceFactory.getInstance().threadSafe(retryAbleBean.retryAble().value());
         RetryContext retryContext = retryAbleHandler.build(retryAbleBean.annotation(), callable);
         retryContext.params(retryAbleBean.args());

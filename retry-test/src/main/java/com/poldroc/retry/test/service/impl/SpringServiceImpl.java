@@ -15,6 +15,7 @@ public class SpringServiceImpl implements SpringService {
     @Override
     @Retry
     public String query() {
+
         System.out.println("spring service query...");
         throw new RuntimeException();
     }

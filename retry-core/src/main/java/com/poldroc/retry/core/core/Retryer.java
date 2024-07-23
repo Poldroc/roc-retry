@@ -252,6 +252,7 @@ public class Retryer<R> implements Retry<R> {
      */
     @Override
     public R retryCall(RetryContext<R> context) {
-        return context().retry().retryCall(context);
+        return context.retry().retryCall(context);
+        // return context().retry().retryCall(context);
     }
 }
