@@ -6,7 +6,7 @@
 
     <groupId>io.github.poldroc</groupId>
     <artifactId>roc-retry</artifactId>
-    <version>1.0</version>
+    <version>1.1</version>
     <name>roc-try</name>
     <description>The retry framework based on spring-retry and guava-retrying.</description>
     <packaging>pom</packaging>
