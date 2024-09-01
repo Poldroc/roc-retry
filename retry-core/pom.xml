@@ -10,6 +10,8 @@
     </parent>
 
     <artifactId>retry-core</artifactId>
+    <description>The core module of roc-retry.</description>
+
 
     <properties>
         <maven.compiler.source>8</maven.compiler.source>

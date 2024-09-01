@@ -35,9 +35,8 @@
 <!--            <artifactId>retry-spring</artifactId>-->
 <!--        </dependency>-->
         <dependency>
-            <groupId>com.poldroc</groupId>
+            <groupId>io.github.poldroc</groupId>
             <artifactId>retry-springboot-starter</artifactId>
-            <version>1.0-SNAPSHOT</version>
         </dependency>
 
         <dependency>
