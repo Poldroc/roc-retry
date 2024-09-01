@@ -5,7 +5,7 @@ import com.poldroc.retry.api.model.RetryAttempt;
 /**
  * 重试执行的条件
  * @author Poldroc
- * @date 2024/7/11
+ * @since 2024/7/11
  */
 public interface RetryCondition<R> {
 

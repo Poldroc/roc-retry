@@ -7,7 +7,7 @@ import java.util.concurrent.TimeUnit;
 /**
  * 默认等待时间
  * @author Poldroc
- * @date 2024/7/11
+ * @since 2024/7/11
  */
 
 @ThreadSafe

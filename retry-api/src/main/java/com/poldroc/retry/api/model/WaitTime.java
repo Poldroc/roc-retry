@@ -4,7 +4,7 @@ import java.util.concurrent.TimeUnit;
 /**
  * 等待时间接口
  * @author Poldroc
- * @date 2024/7/11
+ * @since 2024/7/11
  */
 
 public interface WaitTime {

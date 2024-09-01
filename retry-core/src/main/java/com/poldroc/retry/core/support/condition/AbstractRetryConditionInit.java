@@ -11,7 +11,7 @@ import java.util.LinkedList;
  * 满足任意一个条件即可
  *
  * @author Poldroc
- * @date 2024/7/12
+ * @since 2024/7/12
  */
 @ThreadSafe
 public abstract class AbstractRetryConditionInit implements RetryCondition {

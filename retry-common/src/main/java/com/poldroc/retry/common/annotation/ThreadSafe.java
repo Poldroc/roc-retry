@@ -10,7 +10,7 @@ import java.lang.annotation.*;
  * <p>
  * 后期用途：可能会直接基于 class 进行反射创建，要求有些类需要显示指定这个注解。
  * @author Poldroc
- * @date 2024/7/11
+ * @since 2024/7/11
  */
 
 @Documented

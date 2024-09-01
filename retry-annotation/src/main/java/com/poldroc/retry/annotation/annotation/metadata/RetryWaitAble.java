@@ -9,7 +9,7 @@ import java.lang.annotation.*;
  * 1. 用于注解之上指定等待注解的处理信息
  * @see com.poldroc.retry.api.context.RetryWaitContext
  * @author Poldroc
- * @date 2024/7/15
+ * @since 2024/7/15
  */
 
 @Documented

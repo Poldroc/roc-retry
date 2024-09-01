@@ -4,7 +4,7 @@ package com.poldroc.retry.core.constant;
  * 重试等待时间常量
  *
  * @author Poldroc
- * @date 2024/7/11
+ * @since 2024/7/11
  */
 
 public final class RetryWaitConst {

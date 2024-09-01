@@ -8,7 +8,7 @@ import com.poldroc.retry.core.core.RetryWaiter;
 /**
  * 默认的重试等待处理器
  * @author Poldroc
- * @date 2024/7/17
+ * @since 2024/7/17
  */
 @ThreadSafe
 public class DefaultRetryWaitAbleHandler<R> implements RetryWaitAbleHandler<RetryWait, R> {

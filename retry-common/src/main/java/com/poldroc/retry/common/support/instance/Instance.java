@@ -5,7 +5,7 @@ package com.poldroc.retry.common.support.instance;
  * 1. 使用此类的 class 必须有无参构造器
  * 2. 当前类出于测试阶段。
  * @author Poldroc
- * @date 2024/7/11
+ * @since 2024/7/11
  */
 
 public interface Instance {
@@ -54,7 +54,7 @@ public interface Instance {
 
     /**
      * 线程安全对象
-     * 1. 判断当前类是否拥有 {@link com.poldroc.retry.common.annotation.ThreadSafe 注解，
+     * 1. 判断当前类是否拥有 {@link com.poldroc.retry.common.annotation.ThreadSafe} 注解，
      * 如果有，则直接创建单例对象。如果不是，则创建多例对象。
      * @param tClass class 类型
      * @param <T> 泛型

@@ -9,7 +9,7 @@ import com.poldroc.retry.common.annotation.ThreadSafe;
  * 根据时间进行重试的抽象类
  *
  * @author Poldroc
- * @date 2024/7/12
+ * @since 2024/7/12
  */
 
 @ThreadSafe

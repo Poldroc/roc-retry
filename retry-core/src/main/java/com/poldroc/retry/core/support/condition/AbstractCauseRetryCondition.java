@@ -8,7 +8,7 @@ import com.poldroc.retry.common.annotation.ThreadSafe;
  * 根据异常进行重试的条件
  *
  * @author Poldroc
- * @date 2024/7/12
+ * @since 2024/7/12
  */
 @ThreadSafe
 public abstract class AbstractCauseRetryCondition implements RetryCondition {

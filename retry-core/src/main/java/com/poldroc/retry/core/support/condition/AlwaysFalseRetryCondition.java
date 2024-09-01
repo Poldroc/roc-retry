@@ -8,7 +8,7 @@ import com.poldroc.retry.common.annotation.ThreadSafe;
  * 恒为假重试条件
  *
  * @author Poldroc
- * @date 2024/7/12
+ * @since 2024/7/12
  */
 
 @ThreadSafe

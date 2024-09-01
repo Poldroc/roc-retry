@@ -13,7 +13,7 @@ import com.poldroc.retry.core.support.wait.NoRetryWait;
  * 重试等待类构造器
  *
  * @author Poldroc
- * @date 2024/7/11
+ * @since 2024/7/11
  */
 
 @NotThreadSafe

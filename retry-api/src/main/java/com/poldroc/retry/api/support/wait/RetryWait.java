@@ -10,7 +10,7 @@ import java.lang.annotation.Annotation;
  * 1. 所有的实现必须要有无参构造器，因为会基于反射处理类信息。
  * 2. 尽可能的保证为线程安全的，比如 stateless。
  * @author Poldroc
- * @date 2024/7/11
+ * @since 2024/7/11
  */
 
 public interface RetryWait{

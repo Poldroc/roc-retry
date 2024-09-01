@@ -18,7 +18,7 @@ import java.lang.annotation.*;
  * 2. 保持注解和接口的一致性 {@link com.poldroc.retry.api.core.Retry} 接口
  *
  * @author Poldroc
- * @date 2024/7/17
+ * @since 2024/7/17
  */
 
 @Documented

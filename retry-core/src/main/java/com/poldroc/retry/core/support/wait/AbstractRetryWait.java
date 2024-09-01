@@ -8,7 +8,7 @@ import com.poldroc.retry.core.model.DefaultWaitTime;
  * 默认重试时间等待
  *
  * @author Poldroc
- * @date 2024/7/11
+ * @since 2024/7/11
  */
 
 public abstract class AbstractRetryWait implements RetryWait {

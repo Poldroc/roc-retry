@@ -5,7 +5,7 @@ import com.poldroc.retry.api.support.stop.RetryStop;
 /**
  * 最大尝试次数终止策略
  * @author Poldroc
- * @date 2024/7/11
+ * @since 2024/7/11
  */
 
 public class MaxAttemptRetryStop implements RetryStop {

@@ -28,7 +28,7 @@ import java.util.concurrent.Callable;
  * 引导核心类
  *
  * @author Poldroc
- * @date 2024/7/13
+ * @since 2024/7/13
  */
 @NotThreadSafe
 public class Retryer<R> implements Retry<R> {
