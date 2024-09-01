@@ -6,10 +6,11 @@ import com.poldroc.retry.common.annotation.ThreadSafe;
 import com.poldroc.retry.common.support.instance.impl.InstanceFactory;
 
 /**
- * 不指定任何动作
- * @author binbin.hou
- * @since 0.0.1
+ * 没有任何恢复操作
+ * @author Poldroc
+ * @since 2024/9/1
  */
+
 @ThreadSafe
 public class NoRecover implements Recover {
 

@@ -24,3 +24,20 @@ roc-retry 是支持过程式编程和注解编程的 java 重试框架
 ### RetryWait
 
 用于指定重试的等待策略
+
+
+
+## 快速开始
+
+### 引入
+
+```xml
+<dependency>
+    <groupId>io.github.poldroc</groupId>
+    <artifactId>retry-core</artifactId>
+    <version>1.0</version>
+</dependency>
+```
+
+
+
