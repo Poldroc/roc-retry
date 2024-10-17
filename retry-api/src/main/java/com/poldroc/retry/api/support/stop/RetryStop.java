@@ -10,7 +10,7 @@ import com.poldroc.retry.api.model.RetryAttempt;
 public interface RetryStop {
 
     /**
-     * 停止执行
+     * 停止执行重试
      * @param attempt 执行信息
      * @return 是否停止
      */

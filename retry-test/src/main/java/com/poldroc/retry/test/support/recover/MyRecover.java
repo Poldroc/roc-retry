@@ -19,5 +19,4 @@ public class MyRecover implements Recover {
         // 通知
         System.out.println("[Recover] " + name + "查询失败了！");
     }
-
 }

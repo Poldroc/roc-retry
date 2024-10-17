@@ -10,7 +10,7 @@ import com.poldroc.retry.api.model.RetryAttempt;
 public interface RetryListen {
 
     /**
-     * 执行重试监听
+     * 执行重试监听，每次重试执行的最后触发监听器
      * @param attempt 重试
      * @param <R> 泛型
      */

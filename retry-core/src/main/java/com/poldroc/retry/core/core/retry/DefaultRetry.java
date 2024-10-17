@@ -45,6 +45,19 @@ public class DefaultRetry<R> implements Retry<R> {
         return InstanceFactory.getInstance().singleton(DefaultRetry.class);
     }
 
+    /**
+     * 重试调用
+     * <p>
+     * 1. 执行方法体
+     * 2. 判断是否需要重试 -> 符合{@link RetryCondition} 重试条件 && 不符合{@link RetryStop} 重试停止条件
+     * 3. 满足重试条件，并且不满足重试停止条件 -> 计算等待时间 -> 阻塞 -> 重试次数+1 -> 添加重试历史 -> 重新执行 -> 触发监听器
+     * 4. 满足重试条件，但是满足重试停止条件 -> 触发恢复策略
+     * 5. 最后一次重试还是有异常，直接抛出异常
+     * 6. 返回最后一次尝试的结果
+     *
+     * @param context 执行上下文
+     * @return
+     */
     @Override
     public R retryCall(RetryContext<R> context) {
         List<RetryAttempt<R>> history = new ArrayList<>();

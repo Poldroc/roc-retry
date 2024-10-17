@@ -10,7 +10,7 @@ import com.poldroc.retry.api.model.WaitTime;
 public interface RetryBlock {
 
     /**
-     * 阻塞方式
+     * 重试等待阻塞方式
      * @param waitTime 等待时间
      */
     void block(final WaitTime waitTime);

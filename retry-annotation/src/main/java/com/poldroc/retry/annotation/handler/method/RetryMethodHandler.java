@@ -36,7 +36,7 @@ public class RetryMethodHandler implements IMethodHandler {
         Callable callable = buildCallable(obj, method, args);
         RetryAbleHandler retryAbleHandler = InstanceFactory.getInstance().threadSafe(retryAbleBean.retryAble().value());
 
-        // 3. 构建执行上下文
+        // 3. 根据注解的内容构建执行上下文
         RetryContext retryContext = retryAbleHandler.build(retryAbleBean.annotation(), callable);
         return Retryer.newInstance().retryCall(retryContext);
     }
