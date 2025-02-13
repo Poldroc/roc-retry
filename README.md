@@ -1,8 +1,7 @@
 # roc-retry
+[中文](./README-zh.md)
 
 roc-retry is a Java retry framework that supports both procedural programming and annotation-based programming.
-
-[Chinese Document](./README-zh.md)
 
 ## **Feature Description**
 
