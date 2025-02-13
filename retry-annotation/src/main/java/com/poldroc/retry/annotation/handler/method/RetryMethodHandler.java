@@ -38,6 +38,7 @@ public class RetryMethodHandler implements IMethodHandler {
 
         // 3. 根据注解的内容构建执行上下文
         RetryContext retryContext = retryAbleHandler.build(retryAbleBean.annotation(), callable);
+        retryContext.params(args);
         return Retryer.newInstance().retryCall(retryContext);
     }
 

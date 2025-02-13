@@ -13,7 +13,7 @@ import java.lang.annotation.Annotation;
 public class RetryAbleBean {
 
     /**
-     * 注解信息
+     * 注解处理器信息
      */
     private RetryAble retryAble;
 
