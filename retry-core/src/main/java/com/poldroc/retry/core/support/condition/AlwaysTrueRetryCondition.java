@@ -9,7 +9,7 @@ import com.poldroc.retry.common.annotation.ThreadSafe;
  * 恒为真重试条件
  *
  * @author Poldroc
- * @since 2024/7/12
+ *  
  */
 
 @ThreadSafe

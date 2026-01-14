@@ -10,11 +10,20 @@ import java.util.LinkedList;
  * 重试条件工具类
  *
  * @author Poldroc
- * @since 2024/7/12
+ *  
  */
 
 public class RetryConditions {
     private RetryConditions() {
+    }
+
+
+    public static <R> RetryCondition<R> alwaysTrue() {
+        return InstanceFactory.getInstance().singleton(AlwaysTrueRetryCondition.class);
+    }
+
+    public static <R> RetryCondition<R> alwaysFalse() {
+        return InstanceFactory.getInstance().singleton(AlwaysFalseRetryCondition.class);
     }
 
     /**
@@ -118,6 +127,5 @@ public class RetryConditions {
             }
         };
     }
-
 
 }

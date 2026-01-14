@@ -11,7 +11,7 @@ import com.poldroc.retry.common.support.instance.impl.InstanceFactory;
  * 1. 不是很建议使用这种方式
  * 2. 一般的异常都有时间性，在一定区间内有问题，那就是有问题。
  * @author Poldroc
- * @since 2024/7/11
+ *  
  */
 
 @ThreadSafe

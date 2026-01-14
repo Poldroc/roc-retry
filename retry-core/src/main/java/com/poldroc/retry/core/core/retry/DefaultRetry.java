@@ -30,7 +30,7 @@ import java.util.concurrent.TimeUnit;
  * 默认的重试实现
  *
  * @author Poldroc
- * @since 2024/7/11
+ *  
  */
 
 @ThreadSafe
@@ -47,13 +47,6 @@ public class DefaultRetry<R> implements Retry<R> {
 
     /**
      * 重试调用
-     * <p>
-     * 1. 执行方法体
-     * 2. 判断是否需要重试 -> 符合{@link RetryCondition} 重试条件 && 不符合{@link RetryStop} 重试停止条件
-     * 3. 满足重试条件，并且不满足重试停止条件 -> 计算等待时间 -> 阻塞 -> 重试次数+1 -> 添加重试历史 -> 重新执行 -> 触发监听器
-     * 4. 满足重试条件，但是满足重试停止条件 -> 触发恢复策略
-     * 5. 最后一次重试还是有异常，直接抛出异常
-     * 6. 返回最后一次尝试的结果
      *
      * @param context 执行上下文
      * @return
@@ -70,11 +63,11 @@ public class DefaultRetry<R> implements Retry<R> {
         final RetryStop retryStop = context.stop();
         final RetryBlock retryBlock = context.block();
         final RetryListen retryListen = context.listen();
-
         // 触发执行的 condition 并且 不触发 stop 策略 就进行重试
         while (retryCondition.condition(retryAttempt) && !retryStop.stop(retryAttempt)) {
-            // 线程阻塞
+            // 根据等待时间计算策略计算等待时间
             WaitTime waitTime = calcWaitTime(waitContextList, retryAttempt);
+            // 根据上面计算的时间阻塞等待
             retryBlock.block(waitTime);
             // 每一次执行会更新 executeResult
             attempts++;
@@ -85,7 +78,7 @@ public class DefaultRetry<R> implements Retry<R> {
             retryListen.listen(retryAttempt);
         }
 
-        // 仍然满足重试条件，但是满足重试停止条件
+        // 仍然满足重试条件，但是满足重试停止条件 （如一直出现异常但是到达最大重试次数）
         if (retryCondition.condition(retryAttempt) && retryStop.stop(retryAttempt)) {
             // 触发恢复策略
             final Recover recover = context.recover();
@@ -104,6 +97,7 @@ public class DefaultRetry<R> implements Retry<R> {
         }
         // 返回最后一次尝试的结果
         return retryAttempt.result();
+
     }
 
     /**

@@ -6,10 +6,11 @@
     <parent>
         <groupId>io.github.poldroc</groupId>
         <artifactId>roc-retry</artifactId>
-        <version>1.1</version>
+        <version>1.2</version>
     </parent>
 
     <artifactId>retry-core</artifactId>
+    <name>roc-retry :: retry-core</name>
     <description>The core module of roc-retry.</description>
 
 
@@ -29,5 +30,27 @@
             <artifactId>retry-common</artifactId>
         </dependency>
     </dependencies>
+
+    <developers>
+        <developer>
+            <name>Poldroc</name>
+            <email>engroc@foxmail.com</email>
+        </developer>
+    </developers>
+
+    <licenses>
+        <license>
+            <name>Apache License, Version 2.0</name>
+            <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+        </license>
+    </licenses>
+
+    <scm>
+        <connection>scm:git:git://github.com/Poldroc/roc-retry.git</connection>
+        <developerConnection>scm:git:ssh://github.com/Poldroc/roc-retry.git</developerConnection>
+        <url>https://github.com/Poldroc/roc-retry/tree/master</url>
+    </scm>
+
+    <url>https://github.com/Poldroc/roc-retry.git</url>
 
 </project>

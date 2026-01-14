@@ -5,6 +5,7 @@ import com.poldroc.retry.core.core.Retryer;
 import com.poldroc.retry.core.support.condition.RetryConditions;
 import com.poldroc.retry.core.support.listen.RetryListens;
 import com.poldroc.retry.core.support.recover.Recovers;
+import com.poldroc.retry.core.support.stop.MaxAttemptRetryStop;
 import com.poldroc.retry.core.support.wait.NoRetryWait;
 import org.junit.Test;
 

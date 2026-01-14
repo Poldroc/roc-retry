@@ -18,7 +18,7 @@ import java.util.concurrent.Callable;
  * 默认重试执行上下文
  *
  * @author Poldroc
- * @since 2024/7/11
+ *  
  */
 
 @NotThreadSafe
@@ -130,10 +130,10 @@ public class DefaultRetryContext<R> implements RetryContext<R> {
         return this;
     }
 
-    public DefaultRetryContext<R> retry(Callable<R> callable) {
-        this.callable = callable;
-        return this;
-    }
+//    public DefaultRetryContext<R> retry(Callable<R> callable) {
+//        this.callable = callable;
+//        return this;
+//    }
 
     @Override
     public RetryListen listen() {

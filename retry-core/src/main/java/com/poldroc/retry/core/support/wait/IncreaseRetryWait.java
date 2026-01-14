@@ -8,7 +8,7 @@ import com.poldroc.retry.common.annotation.ThreadSafe;
  * 递增重试等待策略
  *
  * @author Poldroc
- * @since 2024/7/11
+ *  
  */
 @ThreadSafe
 public class IncreaseRetryWait extends AbstractRetryWait {

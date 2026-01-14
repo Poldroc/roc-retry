@@ -4,7 +4,7 @@ import com.poldroc.retry.api.model.RetryAttempt;
 /**
  * 结束的条件
  * @author Poldroc
- * @since 2024/7/11
+ *  
  */
 
 public interface RetryStop {

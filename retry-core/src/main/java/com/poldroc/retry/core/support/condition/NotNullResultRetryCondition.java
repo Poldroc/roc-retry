@@ -6,7 +6,7 @@ import com.poldroc.retry.common.annotation.ThreadSafe;
  * 非空结果重试条件
  *
  * @author Poldroc
- * @since 2024/7/12
+ *  
  */
 
 @ThreadSafe

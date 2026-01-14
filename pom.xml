@@ -6,7 +6,7 @@
 
     <groupId>io.github.poldroc</groupId>
     <artifactId>roc-retry</artifactId>
-    <version>1.1</version>
+    <version>1.2</version>
     <name>roc-try</name>
     <description>The retry framework based on spring-retry and guava-retrying.</description>
     <packaging>pom</packaging>
@@ -21,6 +21,7 @@
     </modules>
 
     <properties>
+        <project.display.name>roc-retry</project.display.name>
         <maven.compiler.source>8</maven.compiler.source>
         <maven.compiler.target>8</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -30,7 +31,6 @@
         <spring.version>5.3.20</spring.version>
         <aspectj.version>1.9.19</aspectj.version>
         <spring-boot.version>2.7.5</spring-boot.version>
-
     </properties>
 
     <dependencyManagement>
@@ -117,6 +117,19 @@
         </dependencies>
     </dependencyManagement>
 
+    <profiles>
+        <profile>
+            <id>central-meta</id>
+            <activation>
+                <activeByDefault>true</activeByDefault>
+            </activation>
+            <properties>
+                <project.name>${project.display.name}</project.name>
+            </properties>
+        </profile>
+    </profiles>
+
+
     <build>
         <plugins>
             <!--   central发布插件    -->
@@ -164,7 +177,7 @@
                 <version>1.5</version>
                 <configuration>
                     <!--   没有配置环境变量，可知道GnuPG路径 -->
-                    <executable>F:\Environment\GnuPG\bin\gpg.exe</executable>
+                    <executable>/opt/homebrew/bin/gpg</executable>
                 </configuration>
                 <executions>
                     <execution>

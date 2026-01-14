@@ -4,7 +4,7 @@ package com.poldroc.retry.core.constant;
  * 重试等待时间常量
  *
  * @author Poldroc
- * @since 2024/7/11
+ *  
  */
 
 public final class RetryWaitConst {
@@ -24,9 +24,9 @@ public final class RetryWaitConst {
 
     /**
      * 最大等待时间
-     * 30min
+     * 5s
      */
-    public static final long DEFAULT_MAX_MILLS = 30 * 60 * 1000L;
+    public static final long DEFAULT_MAX_MILLS = 5 * 1000L;
 
     /**
      * 增加的毫秒数因数

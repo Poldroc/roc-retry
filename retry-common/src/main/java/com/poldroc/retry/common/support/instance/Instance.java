@@ -5,7 +5,7 @@ package com.poldroc.retry.common.support.instance;
  * 1. 使用此类的 class 必须有无参构造器
  * 2. 当前类出于测试阶段。
  * @author Poldroc
- * @since 2024/7/11
+ *  
  */
 
 public interface Instance {

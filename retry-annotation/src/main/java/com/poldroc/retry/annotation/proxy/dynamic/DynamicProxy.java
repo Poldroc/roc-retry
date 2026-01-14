@@ -14,7 +14,7 @@ import java.lang.reflect.Proxy;
  * 动态代理
  *
  * @author Poldroc
- * @since 2024/7/14
+ *  
  */
 
 @ThreadSafe
@@ -47,5 +47,14 @@ public class DynamicProxy implements InvocationHandler, IProxy {
         } catch (Throwable throwable) {
             throw throwable;
         }
+    }
+
+    private String generateCacheKey(Method method, Object[] args) {
+        StringBuilder keyBuilder = new StringBuilder();
+        keyBuilder.append(method.getName());
+        for (Object arg : args) {
+            keyBuilder.append(arg != null ? arg.hashCode() : "null");
+        }
+        return keyBuilder.toString();
     }
 }

@@ -12,7 +12,7 @@ import com.poldroc.retry.api.model.WaitTime;
  * 4. factor 小于 1 且 大于 0 时，等待时间会逐渐减小
  *
  * @author Poldroc
- * @since 2024/7/11
+ *  
  */
 
 public class ExponentialRetryWait extends AbstractRetryWait {

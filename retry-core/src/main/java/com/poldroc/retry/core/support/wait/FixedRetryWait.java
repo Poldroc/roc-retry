@@ -8,7 +8,7 @@ import com.poldroc.retry.common.annotation.ThreadSafe;
  * 固定时间间隔等待
  *
  * @author Poldroc
- * @since 2024/7/11
+ *  
  */
 
 @ThreadSafe
@@ -18,5 +18,4 @@ public class FixedRetryWait extends AbstractRetryWait {
     public WaitTime waitTime(RetryWaitContext retryWaitContext) {
         return super.rangeCorrect(retryWaitContext.value(), retryWaitContext.min(), retryWaitContext.max());
     }
-
 }

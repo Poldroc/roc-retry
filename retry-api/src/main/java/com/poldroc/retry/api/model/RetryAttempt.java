@@ -5,7 +5,7 @@ import java.util.List;
 /**
  * 重试信息接口
  * @author Poldroc
- * @since 2024/7/11
+ *  
  */
 
 public interface RetryAttempt<R> {

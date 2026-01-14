@@ -28,7 +28,7 @@ import java.util.concurrent.Callable;
  * 引导核心类
  *
  * @author Poldroc
- * @since 2024/7/13
+ *  
  */
 @NotThreadSafe
 public class Retryer<R> implements Retry<R> {
@@ -41,6 +41,7 @@ public class Retryer<R> implements Retry<R> {
     /**
      * 重试实现类
      * 1. 不推荐用户自定义，但是暴露出来。
+     * 重试的核心逻辑都在这里面。
      */
     private Retry<R> retry = DefaultRetry.getInstance();
 
@@ -65,18 +66,21 @@ public class Retryer<R> implements Retry<R> {
 
     /**
      * 监听器
+     * 重新执行方法体后触发
      * 1. 默认不进行任何操作
      */
     private RetryListen listen = NoRetryListen.getInstance();
 
     /**
      * 恢复策略
+     * 符合重试条件但是也符合停止条件时触发
      * 1. 默认不进行任何操作
      */
     private Recover recover = NoRecover.getInstance();
 
     /**
      * 重试等待上下文
+     * 包含等待策略和对应的时间参数
      */
     private List<RetryWaitContext<R>> waitContexts = Collections.singletonList(RetryWaiter.<R>retryWait(NoRetryWait.class).context());
 
@@ -168,7 +172,7 @@ public class Retryer<R> implements Retry<R> {
      * @param block 阻塞策略
      * @return this
      */
-    private Retryer<R> block(RetryBlock block) {
+    public Retryer<R> block(RetryBlock block) {
         ArgUtil.notNull(block, "block");
 
         this.block = block;
@@ -181,7 +185,7 @@ public class Retryer<R> implements Retry<R> {
      * @param stop 停止策略
      * @return this
      */
-    private Retryer<R> stop(RetryStop stop) {
+    public Retryer<R> stop(RetryStop stop) {
         ArgUtil.notNull(stop, "stop");
 
         this.stop = stop;

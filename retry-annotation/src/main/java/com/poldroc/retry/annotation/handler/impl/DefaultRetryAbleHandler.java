@@ -19,7 +19,7 @@ import java.util.concurrent.Callable;
 /**
  * 默认的重试处理器
  * @author Poldroc
- * @since 2024/7/18
+ *  
  */
 
 @ThreadSafe
@@ -59,5 +59,6 @@ public class DefaultRetryAbleHandler<R> implements RetryAbleHandler<Retry, R> {
         }
         return retryWaitContexts;
     }
+
 }
 

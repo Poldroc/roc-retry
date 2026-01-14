@@ -9,7 +9,7 @@ import com.poldroc.retry.api.model.RetryAttempt;
  * 3. 根据实际使用，一次失败对应的 recover 应该是唯一的。
  * 注意：实现类应该有无参构造函数
  * @author Poldroc
- * @since 2024/7/11
+ *  
  *
  */
 public interface Recover {

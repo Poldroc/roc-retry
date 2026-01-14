@@ -12,5 +12,4 @@ public class UserServiceImpl implements UserService {
         System.out.println("查询用户...");
         throw new RuntimeException();
     }
-
 }

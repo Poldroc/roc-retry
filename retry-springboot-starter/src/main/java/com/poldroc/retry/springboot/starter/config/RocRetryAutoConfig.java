@@ -7,7 +7,7 @@ import org.springframework.context.annotation.Configuration;
 /**
  * 重试自动配置类
  * @author Poldroc
- * @since 2024/7/22
+ *  
  */
 @EnableRetry
 @Configuration

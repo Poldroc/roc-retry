@@ -5,11 +5,12 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.ComponentScan;
 
-@EnableRetry
+//@EnableRetry
 @SpringBootApplication
 @ComponentScan(basePackages = "com.poldroc.retry.test.service")
 public class RocRetryApplication {
     public static void main(String[] args) {
         SpringApplication.run(RocRetryApplication.class, args);
+
     }
 }
