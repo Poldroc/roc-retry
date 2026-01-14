@@ -18,6 +18,8 @@ roc-retry 是支持过程式编程和注解编程的 java 重试框架
 
 ## 核心逻辑流程图
 
+![image-20260114234253613](https://engroc1.oss-cn-shenzhen.aliyuncs.com/Typora/202601142342653.png)
+
 <img src="https://engroc1.oss-cn-shenzhen.aliyuncs.com/Typora/202512252250044.png" alt="image-20251225225044920" style="zoom: 33%;" />
 
 
